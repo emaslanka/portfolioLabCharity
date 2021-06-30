@@ -27,7 +27,7 @@ public class HomeController {
     public String homeAction(Model model){
 
         int amountOfDonation = donationRepository.countAllDonations();
-        Integer amountOfBags = donationRepository.countAllBags();;
+        Integer amountOfBags = donationRepository.countAllBags();
         List<Institution> institutionList= institutionRepository.findAll() ;
         model.addAttribute("institutions", institutionList);
         model.addAttribute("donations", amountOfDonation);

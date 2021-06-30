@@ -9,8 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Document</title>
-
     <link rel="stylesheet" href="<c:url value="resources/css/style.css"/>"/>
+
+
 </head>
 <body>
 <%@ include file="jspf/header.jsp" %>
@@ -18,7 +19,9 @@
 <section class="stats">
     <div class="container container--85">
         <div class="stats--item">
-            <em> <c:out value="${bags}"/> </em>
+            <em> <c:if test="${bags==null}">0</c:if>
+                <c:out value="${bags}"/>
+            </em>
 
             <h3>Oddanych worków</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius est beatae, quod accusamus illum
@@ -137,7 +140,8 @@
 </section>
 
 <%@ include file="jspf/footer.jsp" %>
+<script src="resources/js/app.js"></script>
 
-<script src="<c:url value="resources/js/app.js"/>"></script>
+
 </body>
 </html>
