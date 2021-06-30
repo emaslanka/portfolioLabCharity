@@ -88,7 +88,7 @@
             <h3>Wybierz organizacje, której chcesz pomóc:</h3>
 
             <div>
-              <form:select path="institution" items="${institutions}"  itemLabel="name" itemValue="id" />
+              <form:select path="institution" items="${institutions}"  itemLabel="name" itemValue="id" id="institution"/>
             </div>
 
 
@@ -106,15 +106,15 @@
               <div class="form-section--column">
                 <h4>Adres odbioru</h4>
                 <div class="form-group form-group--inline">
-                  <label> Ulica <form:input path="street" /> </label>
+                  <label> Ulica <form:input path="street" id="street"/> </label>
                 </div>
                 <div class="form-group form-group--inline">
-                  <label> Miasto <form:input path="city"/> </label>
+                  <label> Miasto <form:input path="city" id="city"/> </label>
                 </div>
 
                 <div class="form-group form-group--inline">
                   <label>
-                    Kod pocztowy <form:input path="zipCode" />
+                    Kod pocztowy <form:input path="zipCode" id="zipcode" />
                   </label>
                 </div>
 
@@ -122,17 +122,17 @@
               <div class="form-section--column">
                 <h4>Termin odbioru</h4>
                 <div class="form-group form-group--inline">
-                  <label> Data <form:input type="date" path="pickUpDate"/> </label>
+                  <label> Data <form:input type="date" path="pickUpDate" id="pickupdate"/> </label>
                 </div>
 
                 <div class="form-group form-group--inline">
-                  <label> Godzina <form:input type="time" path="pickUpTime"  /> </label>
+                  <label> Godzina <form:input type="time" path="pickUpTime" id="pickuptime" /> </label>
                 </div>
 
                 <div class="form-group form-group--inline">
                   <label>
                     Uwagi dla kuriera
-                    <form:textarea path="pickUpComment"/>
+                    <form:textarea path="pickUpComment" id = "pickupcomment"/>
                   </label>
                 </div>
               </div>

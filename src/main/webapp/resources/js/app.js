@@ -164,6 +164,17 @@ document.addEventListener("DOMContentLoaded", function() {
       this.$step.parentElement.hidden = this.currentStep >= 5;
 
       // TODO: get data from inputs and show them in summary
+
+      const quantity = document.querySelector("#quantity");
+      const institution= document.querySelector("#institution");
+      const street = document.querySelector("#street");
+      const city = document.querySelector("#city");
+      const zipcode = document.querySelector("zipcode");
+      const pickupdate = document.querySelector("pickupdate");
+      const pickuptime = document.querySelector("pickuptime");
+      const pickupcomment = document.querySelector("pickupcomment");
+
+
     }
 
   }

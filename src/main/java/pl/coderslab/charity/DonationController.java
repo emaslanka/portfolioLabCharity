@@ -40,8 +40,7 @@ public class DonationController {
     @GetMapping("/add")
     public String addDonation (Model model){
         model.addAttribute("donation", new Donation());
-        model.addAttribute("categories", categoryRepository.findAll());
-        model.addAttribute("institutions", institutionRepository.findAll());
+
         return "addDonation";
     }
 
@@ -57,10 +56,10 @@ public class DonationController {
         return "donationConfirmation";
     }
 
-//    @ModelAttribute("institutions")
-//    public List<Institution> institutions() {return institutionRepository.findAll();}
-//
-//    @ModelAttribute("categories")
-//    public List<Category> categories() {return categoryRepository.findAll();}
+    @ModelAttribute("institutions")
+    public List<Institution> institutions() {return institutionRepository.findAll();}
+
+    @ModelAttribute("categories")
+    public List<Category> categories() {return categoryRepository.findAll();}
 
 }
