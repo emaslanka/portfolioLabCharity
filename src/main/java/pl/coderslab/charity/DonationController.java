@@ -46,7 +46,7 @@ public class DonationController {
 
     @PostMapping("/add")
     @Transactional
-    public String addDonation (@ModelAttribute @Valid Donation donation, BindingResult violations){
+    public String addDonation (@Valid @ModelAttribute  Donation donation, BindingResult violations){
         if(violations.hasErrors()){
             Hibernate.initialize(donation.getCategories());
             Hibernate.initialize(donation.getInstitution());

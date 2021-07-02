@@ -3,6 +3,8 @@ package pl.coderslab.charity.entity;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -15,19 +17,26 @@ public class Donation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @Min(1)
     private Integer quantity;
 
-    @OneToMany
+
+    @ManyToMany
     private List<Category> categories = new ArrayList<>();
+
 
     @ManyToOne
     private Institution institution;
+
+
 
     private String street;
 
     private String city;
 
+
     private String zipCode;
+
 
     @DateTimeFormat(pattern = "yyyy-MM-dd", iso = DateTimeFormat.ISO.DATE)
     private LocalDate pickUpDate;

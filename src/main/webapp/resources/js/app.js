@@ -165,16 +165,37 @@ document.addEventListener("DOMContentLoaded", function() {
 
       // TODO: get data from inputs and show them in summary
 
-      const quantity = document.querySelector("#quantity");
-      const institution= document.querySelector("#institution");
+      //elements from form
+      const formQuantity = document.getElementById("quantity").value;
+      const formCategory = document.querySelectorAll("[name = categories]");
+      const formInstitution = document.getElementById("institution").innerText;
+      const formStreet = document.getElementById("#street").value;
+      const formCity = document.getElementById("#city").value;
+      const formZipcode = document.getElementById("#zipcode").value;
+      const formPickupDate = document.getElementById("#pickupdate").value;
+      const formPickupTime = document.getElementById("#pickuptime").value;
+      const formPickupComment = document.getElementById("#pickupcomment").value;
+
+
+
+      // Elements where data have to be displayed
+      const quantity = document.querySelector("#amount");
+      const institution= document.querySelector("#foundation");
       const street = document.querySelector("#street");
       const city = document.querySelector("#city");
-      const zipcode = document.querySelector("zipcode");
-      const pickupdate = document.querySelector("pickupdate");
-      const pickuptime = document.querySelector("pickuptime");
-      const pickupcomment = document.querySelector("pickupcomment");
+      const zipcode = document.querySelector("#zipcode");
+      const pickupdate = document.querySelector("#date");
+      const pickuptime = document.querySelector("#time");
+      const pickupcomment = document.querySelector("#comment");
 
-
+      quantity.innerHTML = formQuantity + " worki z kategorii "+ formCategory.values();
+      institution.innerHTML = "Dla fundacji " + formInstitution;
+      street.innerHTML = formStreet;
+      city.innerHTML = formCity;
+      zipcode.innerHTML=formZipcode;
+      pickupdate.innerHTML=formPickupDate;
+      pickuptime.innerHTML=formPickupTime;
+      pickupcomment.innerHTML = formPickupComment;
     }
 
   }

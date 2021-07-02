@@ -13,6 +13,7 @@
     <title>Add donation</title>
     <link rel="stylesheet" href="<c:url value="resources/css/style.css"/>"/>
 
+
   </head>
   <body>
 
@@ -71,7 +72,7 @@
             <div class="form-group form-group--inline">
               <label>
                 Liczba 60l worków:
-                <form:input id="quantity"  path="quantity" type="number"/>
+                <form:input id="quantity"  path="quantity" type="number" min="1"/>
               </label>
             </div>
 
@@ -157,13 +158,13 @@
                   <li>
                     <span class="icon icon-bag"></span>
                     <span class="summary--text"
-                    > <span id="quantity"> worki z kategorii </span></span
+                    > <span id="amount"> worki z kategorii </span></span
                     >
                   </li>
 
                   <li>
                     <span class="icon icon-hand"></span>
-                    <span class="summary--text"
+                    <span class="summary--text" id="foundation"
                       >Dla fundacji "Mam marzenie" w Warszawie</span
                     >
                   </li>
@@ -174,19 +175,19 @@
                 <div class="form-section--column">
                   <h4>Adres odbioru:</h4>
                   <ul>
-                    <li>Prosta 51</li>
-                    <li>Warszawa</li>
-                    <li>99-098</li>
-                    <li>123 456 789</li>
+                    <li id="street">Prosta 51</li>
+                    <li id = "city">Warszawa</li>
+                    <li id="zipcode">99-098</li>
+
                   </ul>
                 </div>
 
                 <div class="form-section--column">
                   <h4>Termin odbioru:</h4>
                   <ul>
-                    <li>13/12/2018</li>
-                    <li>15:40</li>
-                    <li>Brak uwag</li>
+                    <li id = "date">13/12/2018</li>
+                    <li id = "time">15:40</li>
+                    <li id = "comment">Brak uwag</li>
                   </ul>
                 </div>
               </div>
@@ -204,6 +205,7 @@
 
   <%@ include file="jspf/footer.jsp" %>
   <script src="resources/js/app.js"></script>
+
 
   </body>
 </html>

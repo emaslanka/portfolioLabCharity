@@ -11,6 +11,7 @@
             <li><a href="#" class="btn btn--without-border">O nas</a></li>
             <li><a href="#" class="btn btn--without-border">Fundacje i organizacje</a></li>
             <li><a href="#" class="btn btn--without-border">Kontakt</a></li>
+            <li><a href="/add" class="btn btn--without-border">Podaruj</a></li>
         </ul>
     </nav>
 
