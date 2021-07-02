@@ -12,6 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Add donation</title>
     <link rel="stylesheet" href="<c:url value="resources/css/style.css"/>"/>
+    <script src="resources/js/app.js"></script>
 
 
   </head>
@@ -158,13 +159,13 @@
                   <li>
                     <span class="icon icon-bag"></span>
                     <span class="summary--text"
-                    > <span id="amount"> worki z kategorii </span></span
+                    > <span id="amountS"> worki z kategorii </span></span
                     >
                   </li>
 
                   <li>
                     <span class="icon icon-hand"></span>
-                    <span class="summary--text" id="foundation"
+                    <span class="summary--text" id="foundationS"
                       >Dla fundacji "Mam marzenie" w Warszawie</span
                     >
                   </li>
@@ -175,9 +176,9 @@
                 <div class="form-section--column">
                   <h4>Adres odbioru:</h4>
                   <ul>
-                    <li id="street">Prosta 51</li>
-                    <li id = "city">Warszawa</li>
-                    <li id="zipcode">99-098</li>
+                    <li id="streetS">Prosta 51</li>
+                    <li id = "cityS">Warszawa</li>
+                    <li id="zipcodeS">99-098</li>
 
                   </ul>
                 </div>
@@ -185,9 +186,9 @@
                 <div class="form-section--column">
                   <h4>Termin odbioru:</h4>
                   <ul>
-                    <li id = "date">13/12/2018</li>
-                    <li id = "time">15:40</li>
-                    <li id = "comment">Brak uwag</li>
+                    <li id = "dateS">13/12/2018</li>
+                    <li id = "timeS">15:40</li>
+                    <li id = "commentS">Brak uwag</li>
                   </ul>
                 </div>
               </div>
@@ -204,7 +205,7 @@
     </section>
 
   <%@ include file="jspf/footer.jsp" %>
-  <script src="resources/js/app.js"></script>
+
 
 
   </body>

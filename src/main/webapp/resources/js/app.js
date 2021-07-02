@@ -1,5 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+  const formQuantity = document.getElementById("quantity");
+  const formCategory = document.querySelector("[path = categories]");
+  const formInstitution = document.getElementById("institution");
+  const formStreet = document.getElementById("#street");
+  const formCity = document.getElementById("#city");
+  const formZipcode = document.getElementById("#zipcode");
+  const formPickupDate = document.getElementById("#pickupdate");
+  const formPickupTime = document.getElementById("#pickuptime");
+  const formPickupComment = document.getElementById("#pickupcomment");
+
+
   /**
    * Form Select
    */
@@ -165,37 +176,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
       // TODO: get data from inputs and show them in summary
 
-      //elements from form
-      const formQuantity = document.getElementById("quantity").value;
-      const formCategory = document.querySelectorAll("[name = categories]");
-      const formInstitution = document.getElementById("institution").innerText;
-      const formStreet = document.getElementById("#street").value;
-      const formCity = document.getElementById("#city").value;
-      const formZipcode = document.getElementById("#zipcode").value;
-      const formPickupDate = document.getElementById("#pickupdate").value;
-      const formPickupTime = document.getElementById("#pickuptime").value;
-      const formPickupComment = document.getElementById("#pickupcomment").value;
-
 
 
       // Elements where data have to be displayed
-      const quantity = document.querySelector("#amount");
-      const institution= document.querySelector("#foundation");
-      const street = document.querySelector("#street");
-      const city = document.querySelector("#city");
-      const zipcode = document.querySelector("#zipcode");
-      const pickupdate = document.querySelector("#date");
-      const pickuptime = document.querySelector("#time");
-      const pickupcomment = document.querySelector("#comment");
+      const quantity = document.querySelector("#amountS");
+      const institution= document.querySelector("#foundationS");
+      const street = document.querySelector("#streetS");
+      const city = document.querySelector("#cityS");
+      const zipcode = document.querySelector("#zipcodeS");
+      const pickupdate = document.querySelector("#dateS");
+      const pickuptime = document.querySelector("#timeS");
+      const pickupcomment = document.querySelector("#commentS");
 
-      quantity.innerHTML = formQuantity + " worki z kategorii "+ formCategory.values();
-      institution.innerHTML = "Dla fundacji " + formInstitution;
-      street.innerHTML = formStreet;
-      city.innerHTML = formCity;
-      zipcode.innerHTML=formZipcode;
-      pickupdate.innerHTML=formPickupDate;
-      pickuptime.innerHTML=formPickupTime;
-      pickupcomment.innerHTML = formPickupComment;
+
+      let catsOptions = formCategory.selectedOptions;
+      let cats = Array.from(catsOptions).map(({value})=>value);
+
+      quantity.innerHTML = formQuantity.value + " worki z kategorii "+ cats;
+      institution.innerHTML = "Dla fundacji " + formInstitution.value.innerText;
+      street.innerHTML = formStreet.value;
+      city.innerHTML = formCity.value;
+      zipcode.innerHTML=formZipcode.value;
+      pickupdate.innerHTML=formPickupDate.value;
+      pickuptime.innerHTML=formPickupTime.value;
+      pickupcomment.innerHTML = formPickupComment.value;
     }
 
   }
