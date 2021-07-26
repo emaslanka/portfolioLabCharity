@@ -6,7 +6,7 @@ Items added:
 - displaying number of donative bags and amount of donations
 - form to add donation and form handling
 
-The following items has been used :
+The following items have been used :
 
     Spring
     Hibernate
